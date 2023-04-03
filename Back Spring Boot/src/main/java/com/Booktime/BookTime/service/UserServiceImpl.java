@@ -15,11 +15,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User creer(User user) {
+
         return userRepository.save(user);
     }
 
     @Override
     public List<User> lire() {
+
         return userRepository.findAll();
     }
 
