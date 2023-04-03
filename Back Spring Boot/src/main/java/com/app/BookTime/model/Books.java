@@ -27,7 +27,4 @@ public class Books {
         this.serie = serie;
         this.editeur = editeur;
     }
-
-
-
 }
