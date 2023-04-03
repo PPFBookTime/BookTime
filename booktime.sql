@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 03 avr. 2023 à 14:03
+-- Généré le : lun. 03 avr. 2023 à 14:58
 -- Version du serveur : 10.4.24-MariaDB
 -- Version de PHP : 7.1.32
 
@@ -72,22 +72,23 @@ CREATE TABLE `livres` (
   `ID` int(11) NOT NULL,
   `Titre` varchar(255) DEFAULT NULL,
   `Numero_de_tome` int(11) DEFAULT NULL,
-  `Serie_ID` int(11) DEFAULT NULL
+  `Serie_ID` int(11) DEFAULT NULL,
+  `images` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `livres`
 --
 
-INSERT INTO `livres` (`ID`, `Titre`, `Numero_de_tome`, `Serie_ID`) VALUES
-(1, 'Harry Potter à l\'école des sorciers', 1, 1),
-(2, 'Harry Potter et la chambre des secrets', 2, 1),
-(3, 'Le Seigneur des anneaux : La Communauté de l\'anneau', 1, 2),
-(4, 'Le Seigneur des anneaux : Les Deux Tours', 2, 2),
-(5, 'Le Seigneur des anneaux : Le Retour du Roi', 3, 2),
-(6, 'L\'apprenti épouvanteur', 1, 3),
-(9, 'Le destin de l épouvanteur', 8, 3),
-(10, 'Le sang de l épouvanteur', 10, 3);
+INSERT INTO `livres` (`ID`, `Titre`, `Numero_de_tome`, `Serie_ID`, `images`) VALUES
+(1, 'Harry Potter à l\'école des sorciers', 1, 1, 'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/516qWQcG3FL.jpg'),
+(2, 'Harry Potter et la chambre des secrets', 2, 1, 'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/51zWuPtihpL.jpg'),
+(3, 'Le Seigneur des anneaux : La Communauté de l\'anneau', 1, 2, 'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/51VPYs+65XL._SX303_BO1,204,203,200_.jpg'),
+(4, 'Le Seigneur des anneaux : Les Deux Tours', 2, 2, 'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61HMVL08idL._AC_UY327_FMwebp_QL65_.jpg'),
+(5, 'Le Seigneur des anneaux : Le Retour du Roi', 3, 2, 'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/51aGUodxeOL._SY291_BO1,204,203,200_QL40_ML2_.jpg'),
+(6, 'L\'apprenti épouvanteur', 1, 3, 'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/81P8I-Ds4EL._AC_UY327_FMwebp_QL65_.jpg'),
+(9, 'Le destin de l épouvanteur', 8, 3, 'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/81-5H0kArBL._AC_UY327_FMwebp_QL65_.jpg'),
+(10, 'Le sang de l épouvanteur', 10, 3, 'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/81YPqSzvjIL._AC_UY327_FMwebp_QL65_.jpg');
 
 -- --------------------------------------------------------
 
