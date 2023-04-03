@@ -27,6 +27,7 @@ public class EditeursServiceImpl implements EditeursService {
         return editeursRepository.findById(id)
                 .map(e ->{
                     e.setNom(editeurs.getNom());
+                    e.setSeries(editeurs.getSeries());
                     return editeursRepository.save(e);
                 } ).orElseThrow(() -> new RuntimeException("Editeur non trouvé"));
     }

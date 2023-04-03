@@ -1,6 +1,8 @@
 package com.Booktime.BookTime.controller;
 
+import com.Booktime.BookTime.controller.dto.EditeursDTO;
 import com.Booktime.BookTime.modele.Editeurs;
+import com.Booktime.BookTime.modele.Series;
 import com.Booktime.BookTime.service.EditeursService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -20,9 +22,13 @@ public class EditeursController {
     }
 
     @GetMapping("/read")
-    public List<Editeurs> read() {
-        return editeursService.lire();
-
+    public List<EditeursDTO> read() {
+        return editeursService.lire()
+                .stream()
+                .map(editeurs -> new EditeursDTO(editeurs.getId(),editeurs.getNom(),editeurs.getSeries()
+                        .stream()
+                        .map(Series::getNom).toList()))
+                .toList();
     }
 
     @PutMapping("/update/{id}")

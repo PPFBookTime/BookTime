@@ -1,25 +1,28 @@
 package com.Booktime.BookTime.modele;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
-import java.util.Set;
+
 
 @Entity
-@Table(name = "editeurs")
+@Table(name = "series")
 @Getter
 @Setter
 @NoArgsConstructor
-public class Editeurs {
+public class Series {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nom;
+    private String Nom;
 
-    @OneToMany(mappedBy="editeurs", fetch = FetchType.LAZY)
-    private List<Series> series;
+
+    @ManyToOne
+    @JoinColumn(name = "Editeur_ID")
+    private Editeurs editeurs;
 }
