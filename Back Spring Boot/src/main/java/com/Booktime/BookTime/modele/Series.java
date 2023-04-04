@@ -25,4 +25,8 @@ public class Series {
     @ManyToOne
     @JoinColumn(name = "Editeur_ID")
     private Editeurs editeurs;
+
+    @OneToMany(mappedBy = "series", fetch = FetchType.LAZY)
+    private List<Livres> livres;
+
 }

@@ -1,8 +1,9 @@
-package com.Booktime.BookTime.service;
+package com.Booktime.BookTime.service.Impl;
 
 import com.Booktime.BookTime.modele.Series;
 import com.Booktime.BookTime.repository.SeriesRepository;
 import com.Booktime.BookTime.repository.UserRepository;
+import com.Booktime.BookTime.service.SeriesService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -10,10 +11,9 @@ import java.util.List;
 
 @Service
 @AllArgsConstructor
-public class SeriesServiceImpl implements SeriesService{
+public class SeriesServiceImpl implements SeriesService {
 
     private final SeriesRepository seriesRepository;
-    private final UserRepository userRepository;
 
     @Override
     public Series creer(Series series) {
@@ -30,14 +30,15 @@ public class SeriesServiceImpl implements SeriesService{
         return seriesRepository.findById(id)
                 .map(s -> {
                     s.setNom(series.getNom());
-                    s.setEditeurs(series.getEditeurs());
+//                    s.setEditeurs(series.getEditeurs());
+//                    s.setLivres(series.getLivres());
                     return seriesRepository.save(s);
                 }).orElseThrow(() -> new RuntimeException("Serie non trouvé"));
     }
 
     @Override
     public String supprimer(Long id) {
-        userRepository.deleteById(id);
+        seriesRepository.deleteById(id);
         return "Serie Supprimer";
     }
 }

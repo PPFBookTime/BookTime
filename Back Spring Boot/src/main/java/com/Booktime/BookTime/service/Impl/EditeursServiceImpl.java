@@ -1,7 +1,8 @@
-package com.Booktime.BookTime.service;
+package com.Booktime.BookTime.service.Impl;
 
 import com.Booktime.BookTime.modele.Editeurs;
 import com.Booktime.BookTime.repository.EditeursRepository;
+import com.Booktime.BookTime.service.EditeursService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
