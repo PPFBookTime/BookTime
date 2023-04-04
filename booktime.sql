@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 03 avr. 2023 à 14:58
+-- Généré le : mar. 04 avr. 2023 à 12:09
 -- Version du serveur : 10.4.24-MariaDB
 -- Version de PHP : 7.1.32
 
@@ -100,7 +100,7 @@ CREATE TABLE `livre_bibliotheque` (
   `ID` int(11) NOT NULL,
   `bibliothèques_ID` int(11) NOT NULL,
   `livres_ID` int(11) NOT NULL,
-  `etat` enum('lu','en cours') NOT NULL
+  `etat` varchar(8) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -110,9 +110,9 @@ CREATE TABLE `livre_bibliotheque` (
 INSERT INTO `livre_bibliotheque` (`ID`, `bibliothèques_ID`, `livres_ID`, `etat`) VALUES
 (1, 1, 1, 'en cours'),
 (2, 1, 2, 'lu'),
-(3, 2, 3, 'en cours'),
-(4, 3, 4, 'lu'),
-(5, 3, 5, 'en cours');
+(3, 2, 3, 'pas lu'),
+(4, 3, 4, 'en cours'),
+(5, 3, 5, 'pas lu');
 
 -- --------------------------------------------------------
 
