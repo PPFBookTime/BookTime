@@ -1,25 +1,21 @@
 package com.Booktime.BookTime.modele;
 
 import jakarta.persistence.*;
-
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "Utilisateurs")
+@Table(name = "bibliothèques")
 @Getter
 @Setter
 @NoArgsConstructor
-public class User {
+public class Bibliotheques {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String login;
-    private String role;
+    private long id;
 
     @OneToOne
-    @JoinColumn(name = "Bibliothèques_ID")
-    private Bibliotheques bibliotheques;
+    @JoinColumn(name = "utilisateurs_ID")
+    private User user;
 }
