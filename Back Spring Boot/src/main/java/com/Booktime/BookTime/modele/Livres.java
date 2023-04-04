@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.http.HttpStatus;
 
+import java.util.List;
+
 @Entity
 @Table(name = "livres")
 @Getter
@@ -23,4 +25,7 @@ public class Livres {
     @JoinColumn(name = "Serie_ID")
     private Series series;
     private String images;
+
+    @OneToMany(mappedBy = "livres", fetch = FetchType.LAZY)
+    private List<LiBibl> liBibls;
 }

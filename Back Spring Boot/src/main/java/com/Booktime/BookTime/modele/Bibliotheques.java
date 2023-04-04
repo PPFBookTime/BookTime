@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Table(name = "bibliothèques")
 @Getter
@@ -18,4 +20,8 @@ public class Bibliotheques {
     @OneToOne
     @JoinColumn(name = "utilisateurs_ID")
     private User user;
+
+    @OneToMany(mappedBy = "bibliotheques", fetch = FetchType.LAZY)
+    private List<LiBibl> liBibl;
+
 }
