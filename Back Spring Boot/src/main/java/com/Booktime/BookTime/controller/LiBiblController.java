@@ -25,7 +25,10 @@ public class LiBiblController {
     public List<LiBiblDTO> read() {
         return liBiblService.lire()
                 .stream()
-                .map(liBibl -> new LiBiblDTO(liBibl.getId(),liBibl.getBibliotheques().getUser().getLogin(),liBibl.getLivres().getTitre(),liBibl.getEtat()))
+                .map(liBibl -> new LiBiblDTO(liBibl.getId(),
+                        liBibl.getBibliotheques().getUser().getLogin(),
+                        liBibl.getLivres().getTitre(),
+                        liBibl.getEtat()))
                 .toList();
     }
 

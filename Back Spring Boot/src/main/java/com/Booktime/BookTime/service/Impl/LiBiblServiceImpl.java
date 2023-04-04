@@ -18,9 +18,16 @@ public class LiBiblServiceImpl implements LiBiblService {
         return liBiblRepository.save(liBibl);
     }
 
+
+
     @Override
     public List<LiBibl> lire() {
         return liBiblRepository.findAll();
+    }
+
+    @Override
+    public List<LiBibl> lireByUserId() {
+        return null;
     }
 
     @Override

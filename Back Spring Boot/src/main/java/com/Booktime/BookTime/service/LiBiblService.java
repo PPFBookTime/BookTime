@@ -9,6 +9,7 @@ public interface LiBiblService {
     LiBibl creer(LiBibl liBibl);
 
     List<LiBibl> lire();
+    List<LiBibl> lireByUserId();
 
     LiBibl modifier(Long id, LiBibl liBibl);
 

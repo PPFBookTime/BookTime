@@ -13,4 +13,6 @@ public interface UserService {
     User modifier(Long id, User user);
 
     String supprimer(Long id);
+
+    User lireById(Long id);
 }

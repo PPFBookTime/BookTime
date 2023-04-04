@@ -6,6 +6,7 @@ import com.Booktime.BookTime.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -40,5 +41,10 @@ public class UserServiceImpl implements UserService {
     public String supprimer(Long id) {
         userRepository.deleteById(id);
         return "User Supprimer";
+    }
+
+    @Override
+    public User lireById(Long id) {
+        return userRepository.findUserById(id);
     }
 }
