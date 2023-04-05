@@ -1,10 +1,11 @@
 package com.Booktime.BookTime.controller.api;
 
 import com.Booktime.BookTime.controller.dto.LiBiblDTO;
-import com.Booktime.BookTime.service.LiBiblService;
+import com.Booktime.BookTime.controller.dto.LivresDTO;
+
+import com.Booktime.BookTime.service.LivresService;
 import com.Booktime.BookTime.service.UserService;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,10 +20,10 @@ public class LibraryController {
 
     private final UserService userService;
 
+    private LivresService livresService;
+
     @GetMapping("/{id}/books")
-    public List<LiBiblDTO> read(
-            @PathVariable Long id
-    ) {
+    public List<LiBiblDTO> booklist(@PathVariable Long id) {
         return this.userService.lireById(id)
                 .getBibliotheques()
                 .getLiBibl()
@@ -33,5 +34,4 @@ public class LibraryController {
                         liBibl.getEtat()))
                 .toList();
     }
-
 }

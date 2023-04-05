@@ -14,4 +14,6 @@ public interface LiBiblService {
     LiBibl modifier(Long id, LiBibl liBibl);
 
     String supprimer(Long id);
+
+    LiBibl lireLiBibl(Long id);
 }

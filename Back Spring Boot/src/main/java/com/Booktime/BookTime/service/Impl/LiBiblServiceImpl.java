@@ -44,4 +44,9 @@ public class LiBiblServiceImpl implements LiBiblService {
         liBiblRepository.findById(id);
         return "Livre Bibliotheque Supprimé";
     }
+
+    @Override
+    public LiBibl lireLiBibl(Long id) {
+        return liBiblRepository.findLiBiblById(id);
+    }
 }

@@ -2,6 +2,7 @@ package com.Booktime.BookTime.modele;
 
 import com.Booktime.BookTime.controller.dto.SeriesDTO;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -14,6 +15,7 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class Livres {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

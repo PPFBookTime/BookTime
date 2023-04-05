@@ -5,10 +5,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class LivresDTO {
+public class SeriesMinimalDTO {
     private Long id;
-    private String Titre;
-    private Integer nbTome;
-    private SeriesMinimalDTO Serie;
-    private String image;
+    private String name;
 }

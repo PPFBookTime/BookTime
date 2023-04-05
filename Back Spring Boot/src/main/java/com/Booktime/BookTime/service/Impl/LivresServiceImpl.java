@@ -42,4 +42,9 @@ public class LivresServiceImpl implements LivresService {
         livreRepository.deleteById(id);
         return "Livre Supprimer";
     }
+
+    @Override
+    public Livres lireLivreSeries(Integer id) {
+        return livreRepository.findLivresBySeries(id);
+    }
 }

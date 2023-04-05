@@ -2,12 +2,12 @@ package com.Booktime.BookTime.service.Impl;
 
 import com.Booktime.BookTime.modele.Series;
 import com.Booktime.BookTime.repository.SeriesRepository;
-import com.Booktime.BookTime.repository.UserRepository;
 import com.Booktime.BookTime.service.SeriesService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
@@ -40,5 +40,10 @@ public class SeriesServiceImpl implements SeriesService {
     public String supprimer(Long id) {
         seriesRepository.deleteById(id);
         return "Serie Supprimer";
+    }
+
+    @Override
+    public Series lireById(Long id) {
+        return seriesRepository.findById(id).get();
     }
 }
