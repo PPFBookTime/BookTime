@@ -3,6 +3,7 @@ package com.Booktime.BookTime.service;
 import com.Booktime.BookTime.modele.User;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface UserService {
 
@@ -15,4 +16,6 @@ public interface UserService {
     String supprimer(Long id);
 
     User lireById(Long id);
+
+    Optional<User> userByLogin(String login);
 }

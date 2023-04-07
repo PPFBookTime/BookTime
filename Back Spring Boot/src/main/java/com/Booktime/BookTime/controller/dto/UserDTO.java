@@ -7,10 +7,6 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class LivresDTO {
-    private Long id;
-    private String Titre;
-    private Integer nbTome;
-    private SeriesMinimalDTO Serie;
-    private String image;
+public class UserDTO {
+    private String login;
 }

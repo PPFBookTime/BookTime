@@ -34,7 +34,7 @@ public class LivresController {
     public List<LivresDTO> read() {
         return livresService.lire()
                 .stream()
-                .map(livres -> toDto(livres))
+                .map(this::toDto)
                 .toList();
     }
 

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
@@ -47,4 +48,10 @@ public class UserServiceImpl implements UserService {
     public User lireById(Long id) {
         return userRepository.findUserById(id);
     }
+
+    @Override
+    public Optional<User> userByLogin(String login){
+        return userRepository.findUserByLogin(login);
+    }
+
 }
