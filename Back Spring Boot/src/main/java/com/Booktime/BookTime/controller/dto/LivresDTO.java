@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class LivresDTO {
     private Long id;
-    private String Titre;
+    private String titre;
     private Integer nbTome;
-    private SeriesMinimalDTO Serie;
+    private SeriesMinimalDTO serie;
     private String image;
     private String description;
 }
