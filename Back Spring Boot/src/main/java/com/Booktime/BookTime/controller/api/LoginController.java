@@ -20,7 +20,7 @@ public class LoginController {
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public UserDTO loginuser(@RequestBody UserDTO userDTO) {
         return this.userService.userByLogin(userDTO.getLogin())
-                .map(user -> new UserDTO(userDTO.getLogin()))
+                .map(user -> new UserDTO(userDTO.getId(),userDTO.getLogin()))
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.FORBIDDEN, "Login Incorrect"));
     }
 
