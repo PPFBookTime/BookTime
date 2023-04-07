@@ -11,5 +11,5 @@ import java.util.List;
 public class EditeursDTO {
     private Long id;
     private String name;
-    private List<String> Series;
+    private List<String> series;
 }
