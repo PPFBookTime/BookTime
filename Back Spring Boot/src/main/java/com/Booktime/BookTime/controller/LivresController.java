@@ -26,6 +26,7 @@ public class LivresController {
                 livresDTO.getNbTome(),
                 seriesService.lireById(livresDTO.getSerie().getId()),
                 livresDTO.getImage(),
+                livresDTO.getDescription(),
                 Collections.emptyList());
         return toDto(livresService.creer(livres));
     }
@@ -41,7 +42,7 @@ public class LivresController {
     private LivresDTO toDto(Livres livres) {
         return new LivresDTO(livres.getId(), livres.getTitre(), livres.getNumero_de_tome(),
                 new SeriesMinimalDTO(livres.getSeries().getId(), livres.getSeries().getNom()),
-                livres.getImages());
+                livres.getImages(), livres.getDescription());
     }
 
     @PutMapping("/update/{id}")

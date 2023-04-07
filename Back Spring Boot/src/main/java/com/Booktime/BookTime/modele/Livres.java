@@ -27,7 +27,7 @@ public class Livres {
     @JoinColumn(name = "Serie_ID")
     private Series series;
     private String images;
-
+    private String description;
     @OneToMany(mappedBy = "livres", fetch = FetchType.LAZY)
     private List<LiBibl> liBibls;
 }

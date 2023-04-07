@@ -13,4 +13,5 @@ public class LivresDTO {
     private Integer nbTome;
     private SeriesMinimalDTO Serie;
     private String image;
+    private String description;
 }

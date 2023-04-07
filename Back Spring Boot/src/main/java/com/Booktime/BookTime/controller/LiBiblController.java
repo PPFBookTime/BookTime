@@ -28,6 +28,9 @@ public class LiBiblController {
                 .map(liBibl -> new LiBiblDTO(liBibl.getId(),
                         liBibl.getBibliotheques().getUser().getLogin(),
                         liBibl.getLivres().getTitre(),
+                        liBibl.getLivres().getSeries().getNom(),
+                        liBibl.getLivres().getImages(),
+                        liBibl.getLivres().getDescription(),
                         liBibl.getEtat()))
                 .toList();
     }
