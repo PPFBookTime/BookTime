@@ -36,8 +36,8 @@ public class LiBiblController {
                 .toList();
     }
 
-    @PutMapping("/update/{id}")
-    public LiBiblDTO update(@PathVariable Long id, @RequestBody LiBiblMinimalDTO liBiblMinimalDTO){
+    @PutMapping("/update")
+    public LiBiblDTO update(@RequestBody Long id, @RequestBody LiBiblMinimalDTO liBiblMinimalDTO){
         LiBibl liBibl = liBiblService.lireLiBibl(id);
         liBibl.setEtat(liBiblMinimalDTO.getEtat());
         LiBibl updated = liBiblService.modifier(liBibl);
