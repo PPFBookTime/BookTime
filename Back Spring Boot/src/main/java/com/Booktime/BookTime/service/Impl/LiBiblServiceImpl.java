@@ -13,11 +13,11 @@ import java.util.List;
 public class LiBiblServiceImpl implements LiBiblService {
 
     private final LiBiblRepository liBiblRepository;
+
     @Override
     public LiBibl creer(LiBibl liBibl) {
         return liBiblRepository.save(liBibl);
     }
-
 
 
     @Override
@@ -31,14 +31,10 @@ public class LiBiblServiceImpl implements LiBiblService {
     }
 
     @Override
-    public LiBibl modifier(Long id, LiBibl liBibl) {
-        return liBiblRepository.findById(id)
-                .map(lb -> {
-                    lb.setEtat(liBibl.getEtat());
-                    return liBiblRepository.save(lb);
-                }).orElseThrow(() -> new RuntimeException(" Livre Bibliotheque non trouvé"));
-    }
+    public LiBibl modifier(LiBibl liBibl) {
+        return liBiblRepository.save(liBibl);
 
+    }
     @Override
     public String supprimer(Long id) {
         liBiblRepository.findById(id);

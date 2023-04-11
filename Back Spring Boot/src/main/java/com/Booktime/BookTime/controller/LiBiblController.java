@@ -2,6 +2,7 @@ package com.Booktime.BookTime.controller;
 
 import com.Booktime.BookTime.controller.dto.BiblioDTO;
 import com.Booktime.BookTime.controller.dto.LiBiblDTO;
+import com.Booktime.BookTime.controller.dto.LiBiblMinimalDTO;
 import com.Booktime.BookTime.modele.LiBibl;
 import com.Booktime.BookTime.service.LiBiblService;
 import lombok.AllArgsConstructor;
@@ -36,8 +37,17 @@ public class LiBiblController {
     }
 
     @PutMapping("/update/{id}")
-    public LiBibl update(@PathVariable Long id, @RequestBody LiBibl liBibl){
-        return liBiblService.modifier(id, liBibl);
+    public LiBiblDTO update(@PathVariable Long id, @RequestBody LiBiblMinimalDTO liBiblMinimalDTO){
+        LiBibl liBibl = liBiblService.lireLiBibl(id);
+        liBibl.setEtat(liBiblMinimalDTO.getEtat());
+        LiBibl updated = liBiblService.modifier(liBibl);
+        return new LiBiblDTO(updated.getId(),
+                updated.getBibliotheques().getUser().getLogin(),
+                updated.getLivres().getTitre(),
+                updated.getLivres().getSeries().getNom(),
+                updated.getLivres().getImages(),
+                updated.getLivres().getDescription(),
+                updated.getEtat());
     }
 
     @DeleteMapping("/delete/{id}")
