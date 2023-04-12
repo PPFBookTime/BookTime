@@ -1,6 +1,7 @@
 package com.Booktime.BookTime.controller.api;
 
 import com.Booktime.BookTime.controller.dto.UserDTO;
+import com.Booktime.BookTime.controller.dto.UserMinimalDTO;
 import com.Booktime.BookTime.modele.User;
 import com.Booktime.BookTime.service.UserService;
 import lombok.AllArgsConstructor;
@@ -18,8 +19,8 @@ public class LoginController {
     private final UserService userService;
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
-    public UserDTO loginuser(@RequestBody UserDTO userDTO) {
-        return this.userService.userByLogin(userDTO.getLogin())
+    public UserDTO loginuser(@RequestBody UserMinimalDTO userMinimalDTO) {
+        return this.userService.userByLogin(userMinimalDTO.getLogin())
                 .map(user -> new UserDTO(user.getId(),user.getLogin(),user.getRole()))
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.FORBIDDEN, "Login Incorrect"));
     }
