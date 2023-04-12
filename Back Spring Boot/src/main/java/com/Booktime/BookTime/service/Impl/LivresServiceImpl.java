@@ -47,4 +47,9 @@ public class LivresServiceImpl implements LivresService {
     public Livres lireLivreSeries(Integer id) {
         return livreRepository.findLivresBySeries(id);
     }
+
+    @Override
+    public Livres lireLivreById(Long id) {
+        return livreRepository.findLivresById(id);
+    }
 }

@@ -38,4 +38,9 @@ public class BilbioServiceImpl implements BiblioService {
         biblioRepository.deleteById(id);
         return "Bibliothèque Supprimer";
     }
+
+    @Override
+    public Bibliotheques lireBiblioById(Long id) {
+        return biblioRepository.findBibliothequesById(id);
+    }
 }

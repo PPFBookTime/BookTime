@@ -13,4 +13,6 @@ public interface BiblioService {
     Bibliotheques modifier(Long id, Bibliotheques bibliotheques);
 
     String supprimer(Long id);
+
+    Bibliotheques lireBiblioById(Long id);
 }

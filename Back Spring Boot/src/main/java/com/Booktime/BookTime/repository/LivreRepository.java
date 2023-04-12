@@ -7,4 +7,6 @@ public interface LivreRepository extends JpaRepository<Livres,Long> {
 
     Livres findLivresBySeries(Integer id);
 
+    Livres findLivresById(Long id);
+
 }
