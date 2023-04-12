@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserDTO {
-    private Long id;
-    private String login;
+public class LiBiblMinimalDTO {
+    private String etat;
 }

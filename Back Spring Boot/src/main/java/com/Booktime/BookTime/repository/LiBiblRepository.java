@@ -7,4 +7,6 @@ public interface LiBiblRepository extends JpaRepository<LiBibl, Long> {
 
     LiBibl findLiBiblById(Long id);
 
+
+
 }

@@ -1,9 +1,14 @@
 package com.Booktime.BookTime.controller;
 
 import com.Booktime.BookTime.controller.dto.BiblioDTO;
+import com.Booktime.BookTime.controller.dto.LiBiblClassicDTO;
 import com.Booktime.BookTime.controller.dto.LiBiblDTO;
+import com.Booktime.BookTime.controller.dto.LiBiblMinimalDTO;
 import com.Booktime.BookTime.modele.LiBibl;
+import com.Booktime.BookTime.repository.BiblioRepository;
+import com.Booktime.BookTime.service.BiblioService;
 import com.Booktime.BookTime.service.LiBiblService;
+import com.Booktime.BookTime.service.LivresService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,9 +21,25 @@ public class LiBiblController {
 
     private final LiBiblService liBiblService;
 
+    private final BiblioService biblioService;
+
+    private final LivresService livresService;
+
     @PostMapping("/create")
-    public LiBibl create(@RequestBody LiBibl liBibl) {
-        return liBiblService.creer(liBibl);
+    public LiBiblDTO create(@RequestBody LiBiblClassicDTO liBiblClassicDTO) {
+        LiBibl liBibl = new LiBibl(liBiblClassicDTO.getId(),
+                biblioService.findBibliothequesByUser_Id(liBiblClassicDTO.getUserId()),
+                livresService.lireLivreById(liBiblClassicDTO.getLivresId()),
+                "pas lu"
+                );
+        LiBibl newLiBibl = liBiblService.creer(liBibl);
+        return new LiBiblDTO(newLiBibl.getId(),
+                newLiBibl.getBibliotheques().getUser().getLogin(),
+                newLiBibl.getLivres().getTitre(),
+                newLiBibl.getLivres().getSeries().getNom(),
+                newLiBibl.getLivres().getImages(),
+                newLiBibl.getLivres().getDescription(),
+                newLiBibl.getEtat());
     }
 
     @GetMapping("/read")
@@ -36,8 +57,17 @@ public class LiBiblController {
     }
 
     @PutMapping("/update/{id}")
-    public LiBibl update(@PathVariable Long id, @RequestBody LiBibl liBibl){
-        return liBiblService.modifier(id, liBibl);
+    public LiBiblDTO update(@PathVariable Long id, @RequestBody LiBiblMinimalDTO liBiblMinimalDTO){
+        LiBibl liBibl = liBiblService.lireLiBibl(id);
+        liBibl.setEtat(liBiblMinimalDTO.getEtat());
+        LiBibl updated = liBiblService.modifier(liBibl);
+        return new LiBiblDTO(updated.getId(),
+                updated.getBibliotheques().getUser().getLogin(),
+                updated.getLivres().getTitre(),
+                updated.getLivres().getSeries().getNom(),
+                updated.getLivres().getImages(),
+                updated.getLivres().getDescription(),
+                updated.getEtat());
     }
 
     @DeleteMapping("/delete/{id}")

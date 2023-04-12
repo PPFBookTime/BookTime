@@ -15,4 +15,6 @@ public interface LivresService {
     String supprimer(Long id);
 
     Livres lireLivreSeries(Integer id);
+
+    Livres lireLivreById(Long id);
 }
