@@ -1,5 +1,6 @@
 package com.Booktime.BookTime.controller;
 
+import com.Booktime.BookTime.controller.dto.UserDTO;
 import com.Booktime.BookTime.modele.User;
 import com.Booktime.BookTime.service.UserService;
 import lombok.AllArgsConstructor;
@@ -20,8 +21,11 @@ public class UserController {
     }
 
     @GetMapping("/read")
-    public List<User> read(){
-        return userService.lire();
+    public List<UserDTO> read(){
+        return userService.lire()
+                .stream()
+                .map(user -> new UserDTO(user.getId(), user.getLogin(),user.getRole()))
+                .toList();
     }
 
     @PutMapping("/update/{id}")
