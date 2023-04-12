@@ -14,5 +14,5 @@ public interface BiblioService {
 
     String supprimer(Long id);
 
-    Bibliotheques lireBiblioById(Long id);
+    Bibliotheques findBibliothequesByUser_Id(Long id);
 }

@@ -28,7 +28,7 @@ public class LiBiblController {
     @PostMapping("/create")
     public LiBiblDTO create(@RequestBody LiBiblClassicDTO liBiblClassicDTO) {
         LiBibl liBibl = new LiBibl(liBiblClassicDTO.getId(),
-                biblioService.lireBiblioById(liBiblClassicDTO.getBibliothequeId()),
+                biblioService.findBibliothequesByUser_Id(liBiblClassicDTO.getUserId()),
                 livresService.lireLivreById(liBiblClassicDTO.getLivresId()),
                 "pas lu"
                 );

@@ -40,7 +40,9 @@ public class BilbioServiceImpl implements BiblioService {
     }
 
     @Override
-    public Bibliotheques lireBiblioById(Long id) {
-        return biblioRepository.findBibliothequesById(id);
+    public Bibliotheques findBibliothequesByUser_Id(Long id) {
+        return biblioRepository.findBibliothequesByUser_Id(id);
     }
+
+
 }

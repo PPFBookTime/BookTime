@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class LiBiblClassicDTO {
     private Long id;
-    private Long bibliothequeId;
+    private Long userId;
     private Long livresId;
     private String etat;
 }
