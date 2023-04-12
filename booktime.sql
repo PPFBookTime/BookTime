@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : ven. 07 avr. 2023 à 10:41
+-- Généré le : mer. 12 avr. 2023 à 12:06
 -- Version du serveur : 10.4.24-MariaDB
 -- Version de PHP : 7.1.32
 
@@ -42,7 +42,11 @@ INSERT INTO `bibliothèques` (`ID`, `utilisateurs_ID`) VALUES
 (3, 3),
 (5, 4),
 (6, 5),
-(7, 6);
+(7, 6),
+(8, 7),
+(10, 8),
+(11, 9),
+(9, 10);
 
 -- --------------------------------------------------------
 
@@ -106,7 +110,22 @@ INSERT INTO `livres` (`ID`, `Titre`, `Numero_de_tome`, `Serie_ID`, `images`, `de
 (21, 'L Invincible forteresse', 5, 6, 'https://cdn1.booknode.com/book_cover/977/mod11/le_trone_de_fer_tome_5_linvincible_forteresse-976687-264-432.jpg', 'Le dénouement est proche. Car il ne reste que deux prétendants au trône des Sept Couronnes : Joffrey, le héraut du clan des Lannister, retranché à Port-Réal, et Stannis Baratheon, qui a masse ses navires aux abords de la capitale en vue de l\'assaut final. Celui qui s\'en rendra maître deviendra le véritable souverain du royaume. Il revient à Tyrion Lannister, le \" Lutin \" Haï de tous - aussi bien de ses ennemis que de ses allies - de préparer activement la défense de l\'invincible forteresse. Pour cela, il a élabore un plan machiavélique afin de défaire le seigneur de Peyredragon et ses troupes. Un plan que seul son cerveau démoniaque et sa volonté de fer peuvent mettre en uvre.. Ce modèle est livré par le fabricant sous forme d\'un assortiment aléatoire de plusieurs modèles et/ou coloris. Il nous est donc impossible de vous proposer un modèle et/ou un coloris en particulier. En validant votre commande, vous recevrez donc un des modèles figurant sur l\'image en fonction du stock disponible. Nous vous remercions pour votre compréhension.'),
 (22, 'Intrigues à Port-Réal', 6, 6, 'https://cdn1.booknode.com/book_cover/997/mod11/le_trone_de_fer_tome_6_intrigues_a_port_real-997179-264-432.jpg', 'Le jeune et inconséquent roi Joffrey semble bien installé sur le trône de fer. L\'usurpateur Baratheon est mort, l\'armée de son frère Stannis a été défaite devant Port-Réal et le souverain Robb se retrouve dépossédé de ses propres terres. Joffrey n\'a pourtant participé à aucune bataille. Il doit ces succès au courage de son oncle Tyrion et à la ruse de son grand-père Tywin. C\'est un roi velléitaire, lâche et cruel qui s\'apprête donc à régner sur les Sept Couronnes. Toutes les forces en présence n\'ont cependant pas dit leur dernier mot. Là où les épées n\'ont pu l\'emporter, la puissance de la magie réussira-t-elle ?'),
 (23, 'L Épée de feu', 7, 6, 'https://cdn1.booknode.com/book_cover/1058/mod11/le_trone_de_fer_tome_7_lepee_de_feu-1057804-264-432.jpg', 'Les sept couronnes sont exsangues. Le royaume panse ses plaies. Les guerres ont vidé les campagnes, les épidémies ont ruiné les récoltes et les pillards écument les terres dévastées. Pourtant il y a toujours autant de prétendants qui briguent la couronne : chacun dans son repaire échafaude des stratégies. Les Lannister multiplient les alliances fragiles, Stannis Baratheon se réfugie toujours davantage dans le culte de R\'hllor, le maître de la lumière, et Robb Stark soupire après son fief en lambeaux. Mais d\'autres ennemis se massent aux frontières, loin dans le nord. Et, pendant que les puissants avancent leurs pions, les faibles tentent de survivre...'),
-(24, 'Les Noces pourpres', 8, 6, 'https://cdn1.booknode.com/book_cover/1038/mod11/le_trone_de_fer_tome_8_les_noces_pourpres-1037687-264-432.jpg', 'Le temps des batailles est révolu. Le fier royaume des Sept Couronnes n\'est plus qu\'un champ de ruines. Les quelques prétendants qui s\'opposent encore nouent alliances et accords par des mariages arrangés et sans amour. Seuls les plus subtils, les plus retors - et parfois les plus lâches -l\'emporteront... Et pendant ce temps, par-delà les mers, loin dans les Terres brûlées, Daenerys, dernière descendante des Targaryen, conquiert un gigantesque empire dans l\'espoir de restaurer l\'antique puissance de Valyria et de ses dragons.');
+(24, 'Les Noces pourpres', 8, 6, 'https://cdn1.booknode.com/book_cover/1038/mod11/le_trone_de_fer_tome_8_les_noces_pourpres-1037687-264-432.jpg', 'Le temps des batailles est révolu. Le fier royaume des Sept Couronnes n\'est plus qu\'un champ de ruines. Les quelques prétendants qui s\'opposent encore nouent alliances et accords par des mariages arrangés et sans amour. Seuls les plus subtils, les plus retors - et parfois les plus lâches -l\'emporteront... Et pendant ce temps, par-delà les mers, loin dans les Terres brûlées, Daenerys, dernière descendante des Targaryen, conquiert un gigantesque empire dans l\'espoir de restaurer l\'antique puissance de Valyria et de ses dragons.'),
+(25, 'The Promised Neverland', 1, 8, 'https://m.media-amazon.com/images/I/91Av5fsl6mL.jpg', 'Dans un orphelinat de Grace Field House, Emma et ses amis découvrent un terrible secret qui les oblige à s’échapper pour sauver leur vie.'),
+(26, 'The Promised Neverland', 2, 8, 'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/91g+7DH3dIL.jpg', 'Emma, Norman et Ray tentent de s’échapper de l’orphelinat, mais ils sont poursuivis par Sœur Krone.'),
+(27, 'The Promised Neverland', 3, 8, 'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/91ls78YxcuL.jpg', 'Emma, Ray et les autres orphelins arrivent dans un nouveau refuge, mais ils découvrent bientôt que leur situation est loin d’être idéale.'),
+(28, 'The Promised Neverland', 4, 8, 'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/81Jw366dfcL.jpg', 'Emma et les autres s’efforcent de trouver un moyen de sauver les enfants laissés derrière eux à Grace Field House.'),
+(29, 'The Promised Neverland', 5, 8, 'https://m.media-amazon.com/images/I/814RLbeHcpL.jpg', 'Emma et ses amis se rapprochent de la vérité sur les démons et leur monde, mais cela pourrait mettre leur vie en danger.'),
+(30, 'Naruto', 1, 9, 'https://m.media-amazon.com/images/I/71gwzyXnaNL.jpg', 'Naruto Uzumaki, un jeune ninja rêve de devenir Hokage, le chef de son village.'),
+(31, 'Naruto', 2, 9, 'https://m.media-amazon.com/images/I/81W0jEvdO9L.jpg', 'Naruto et ses coéquipiers, Sasuke et Sakura, poursuivent leur entraînement et leur apprentissage des techniques ninjas.'),
+(32, 'Naruto', 3, 9, 'https://m.media-amazon.com/images/I/81IRXboBsKL.jpg', 'Naruto et son équipe font face à des ennemis puissants, y compris Zabuza, un ninja légendaire de l’eau.'),
+(33, 'Naruto', 4, 9, 'https://m.media-amazon.com/images/I/814RzYeH3ML.jpg', 'Naruto participe à un examen pour devenir ninja de rang supérieur, mais il doit faire face à des adversaires redoutables, y compris Orochimaru.'),
+(34, 'Naruto', 5, 9, 'https://m.media-amazon.com/images/I/818RM6H2oHL.jpg', 'Naruto et ses amis font face à des ennemis encore plus puissants lors de la deuxième épreuve de l’examen Chunin.'),
+(35, 'Mushoku Tensei', 1, 10, 'https://static.fnac-static.com/multimedia/Images/FR/NR/aa/f1/81/8516010/1505-1/tsp20170316181325/Mushoku-Tensei.jpg', 'Un homme de 34 ans se réincarne dans un monde fantastique avec tous ses souvenirs de sa vie antérieure, et décide de profiter de cette chance pour vivre pleinement sa nouvelle vie.'),
+(36, 'Mushoku Tensei', 2, 10, 'https://m.media-amazon.com/images/I/71e2bWPsABL.jpg', 'Rudeus Greyrat, l’ancien NEET, commence à s’adapter à son nouveau monde et à faire des progrès dans la magie et l’épée.'),
+(37, 'Mushoku Tensei', 3, 10, 'https://m.media-amazon.com/images/I/61oC0tc4C2L.jpg', 'Rudeus est engagé comme tuteur par la fille d’un seigneur, et doit aider la jeune Eris à se préparer à une vie de noblesse.'),
+(38, 'Mushoku Tensei', 4, 10, 'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/91IUkSxZhtL.jpg', 'Rudeus et Eris se lancent dans une aventure dangereuse pour sauver la sœur d’Eris, qui a été kidnappée par des bandits.'),
+(39, 'Mushoku Tensei', 5, 10, 'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/91Vm-cJbY2L.jpg', 'Rudeus et Eris sont recrutés par un groupe de mercenaires pour aider à combattre une armée de démons qui envahit un village voisin.');
 
 -- --------------------------------------------------------
 
@@ -161,7 +180,10 @@ INSERT INTO `series` (`ID`, `Nom`, `Editeur_ID`) VALUES
 (4, 'Le labyrinthe', 1),
 (5, 'Hunger Games', 2),
 (6, 'Games of Thrones', 1),
-(7, 'U4', 3);
+(7, 'U4', 3),
+(8, 'The Promised Neverland', 1),
+(9, 'Naruto', 3),
+(10, 'Mushoku Tensei', 4);
 
 -- --------------------------------------------------------
 
@@ -186,7 +208,11 @@ INSERT INTO `utilisateurs` (`ID`, `Login`, `Role`, `Bibliothèques_ID`) VALUES
 (3, 'Charlie', 'administrateur', 3),
 (4, 'Pierre', 'utilisateur', 5),
 (5, 'Florian', 'utilisateur', 6),
-(6, 'Paul', 'Utilisateur', 7);
+(6, 'Paul', 'utilisateur', 7),
+(7, 'Jean', 'utilisateur', 8),
+(8, 'Michel', 'utilisateur', 9),
+(9, 'Jacque', 'utilisateur', 10),
+(10, 'Romain', 'utilisateur', 11);
 
 --
 -- Index pour les tables déchargées
