@@ -1,0 +1,16 @@
+.input{
+  display: flex;
+  form{
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+  }
+  input {
+    width: auto;
+    padding: 12px 20px;
+    margin: 8px;
+    box-sizing: border-box;
+  }
+}

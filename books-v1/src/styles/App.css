@@ -1,0 +1,269 @@
+@font-face {
+  font-family: "font-1";
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #303a52;
+  font-family: "font-1", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+h2 {
+  color: #574b90;
+  text-align: center;
+  margin: 10px;
+}
+
+h3 {
+  color: #9e579d;
+  text-align: center;
+  margin: 10px;
+}
+
+h4 {
+  color: #574b90;
+  text-align: center;
+  margin: 10px;
+}
+
+p {
+  margin: 10px;
+  color: #fc85ae;
+}
+
+button {
+  width: auto;
+  font-size: 16px;
+  background-color: #574b90;
+  color: #9e579d;
+  border-radius: 20px;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+select {
+  width: auto;
+  font-size: 16px;
+  background-color: #574b90;
+  color: #9e579d;
+  border-radius: 20px;
+  border: none;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+h2 {
+  display: flex;
+  text-align: justify;
+}
+
+h4 {
+  display: flex;
+  text-align: justify;
+}
+
+p {
+  display: flex;
+  text-align: justify;
+}
+
+.navigation ul {
+  display: flex;
+  margin: 30px;
+}
+.navigation ul a {
+  text-decoration: none;
+  padding: 10px;
+}
+.navigation ul a li {
+  color: #fc85ae;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.navigation ul a li:hover {
+  color: #574b90;
+}
+.navigation ul .nav-active {
+  position: relative;
+}
+.navigation ul .nav-active::after {
+  content: "";
+  height: 4px;
+  width: 0;
+  background: #fc85ae;
+  position: absolute;
+  border-radius: 10px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-animation: anim 0.3s ease forwards;
+  animation: anim 0.6s ease forwards;
+}
+@-webkit-keyframes anim {
+  to {
+    width: 100%;
+  }
+}
+@keyframes anim {
+  to {
+    width: 100%;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.header h1 {
+  display: flex;
+  margin: 30px;
+  color: #9e579d;
+}
+.header a {
+  text-decoration-line: none;
+}
+
+.footer {
+  background-color: #574b90;
+  border-top: 2px solid #9e579d;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  color: black;
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+}
+.footer p {
+  text-align: center;
+  justify-content: center;
+}
+
+.accueil {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.livres {
+  background-color: lightgray;
+}
+.livres div {
+  display: flex;
+}
+.livres img {
+  height: 320px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.c-livres {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.c-livres .infos {
+  display: grid;
+  height: 40px;
+}
+.c-livres h4 {
+  text-align: justify;
+}
+.c-livres div {
+  display: flex;
+  width: 800px;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px;
+}
+.c-livres li {
+  display: flex;
+  margin: 30px;
+  text-align: center;
+}
+.c-livres ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mid {
+  margin-bottom: 80px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+.mid .radio-container {
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+  background: #574b90;
+  border-radius: 60px;
+  padding: 5px;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.452);
+}
+
+.input {
+  display: flex;
+}
+.input form {
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+}
+.input input {
+  width: auto;
+  padding: 12px 20px;
+  margin: 8px;
+  box-sizing: border-box;
+}
+
+form {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.c-connexion {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.c-connexion input {
+  width: auto;
+  font-size: 16px;
+  background-color: #574b90;
+  color: #9e579d;
+  border-radius: 20px;
+  border: none;
+  padding: 5px;
+}
+.c-connexion form {
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+}
+.c-connexion label {
+  padding: 5px;
+}
+
+/*# sourceMappingURL=App.css.map */

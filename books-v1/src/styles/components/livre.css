@@ -1,0 +1,17 @@
+.livres {
+  background-color: lightgray;
+}
+.livres ul {
+  display: flex;
+}
+.livres img {
+  height: 100px;
+  width: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.livres h2 {
+  text-align: justify;
+}
+
+/*# sourceMappingURL=livre.css.map */

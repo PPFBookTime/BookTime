@@ -1,0 +1,15 @@
+.footer {
+  background-color: $color-3;
+  border-top:2px solid $color-2;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  color: black;
+  font-size: 25px;
+  text-align: center;
+  padding: 10px;
+  p{
+    text-align: center;
+    justify-content: center;
+  }
+}

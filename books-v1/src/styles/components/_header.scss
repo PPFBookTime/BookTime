@@ -1,0 +1,16 @@
+.header{
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  h1{
+    display: flex;
+    margin: 30px;
+    color: $color-2;
+  }
+  a{
+    text-decoration-line: none;
+  }
+}

@@ -1,0 +1,13 @@
+.livres{
+  div{
+    display: flex;
+  }
+  background-color: lightgray;
+  img {
+    height: 320px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+}
